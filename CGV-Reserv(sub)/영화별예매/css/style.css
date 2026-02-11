@@ -1,0 +1,13 @@
+body {
+    background: #222428;
+    color: #fff;
+    font-family: 'Pretendard', sans-serif;
+    margin: 0 auto;
+}
+
+section {
+    max-width: 1600px;
+    margin: 0 auto;
+    /* background: rgba(255, 0, 0, 0.1); */
+    /* overflow: hidden; */
+}
