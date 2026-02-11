@@ -9,12 +9,13 @@ li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-img, video{
+img,
+video {
     vertical-align: middle;
     max-width: 100%;
 }
@@ -25,11 +26,11 @@ i {
     font-style: normal;
 }
 
-.blind{
+.blind {
     position: absolute;
     top: -9999px;
 }
 
-body{
+body {
     font-family: "Pretendard", sans-serif;
 }

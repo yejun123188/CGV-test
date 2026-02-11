@@ -11,3 +11,99 @@ section {
     /* background: rgba(255, 0, 0, 0.1); */
     /* overflow: hidden; */
 }
+
+h3 {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 34px 0;
+}
+
+.page-wrap {
+    display: flex;
+    justify-content: space-between;
+    background: #161618;
+    padding-top: 54px;
+    padding-bottom: 18px;
+
+}
+
+.page-wrap>h2 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.location {
+    font-size: 12px;
+    font-weight: 500;
+    color: #707070;
+}
+
+.location .active {
+    color: #aaa;
+}
+
+/* 탭메뉴 */
+.tab-menu-btn>ul {
+    display: flex;
+    gap: 10px;
+    padding-top: 60px;
+}
+
+.tab-menu-btn a {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 12px 28px;
+    border-radius: 50px;
+}
+
+.tab-menu-btn .active {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+/* 인기상영작 */
+.popular>ul {
+    display: flex;
+    gap: 45px;
+}
+
+.popular>ul>li img {
+    display: block;
+    border-radius: 24px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrow-btn-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -100px;
+    margin-bottom: 70px;
+}
+
+/* 신규개봉작 */
+.new>ul {
+    display: flex;
+    gap: 45px;
+    border-radius: 24px;
+}
+
+.new img {
+    border-radius: 24px;
+}
+
+/* 전체영화 */
+.all-tab {
+    display: flex;
+    gap: 40px;
+    color: #707070;
+    margin-bottom: 18px;
+}
+
+.all-tab .active {
+    color: #ee3123;
+}
+
+.poster {
+    display: flex;
+    gap: 78px;
+}
