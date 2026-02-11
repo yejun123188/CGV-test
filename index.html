@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깊이 빠져 보다, CGV</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/pretendard-font.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="./css/stylenew.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 헤더영역 -->
+    <header>
+        <div class="header-wrap">
+            <!-- 헤더 위쪽 -->
+            <div class="header-top">
+                <h1 class="logo"><a href="#"><img src="./images/cgv-logo.png" alt="CGV로고"></a></h1>
+                <ul class="user-menu-list">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </div>
+
+            <!-- 헤더 아래쪽 -->
+            <div class="header-bottom">
+                <div class="ham-btn">
+                    <div class="ham-open active">
+                        <a href="#"><img src="./images/ham.png" alt="햄버거"></a>
+                    </div>
+                </div>
+
+                <nav class="main-menu-wrap active">
+                    <ul class="main-menu">
+                        <li><a href="#">영 화</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">현재상영작</a></li>
+                                <li><a href="#">상영예정작</a></li>
+                                <li><a href="#">CGV ONLY</a></li>
+                                <li><a href="#">아트하우스</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">예 매</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">빠른예매</a></li>
+                                <li><a href="#">영화별예매</a></li>
+                                <li><a href="#">극장별예매</a></li>
+                                <li><a href="#">포토플레이</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">매 점</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">푸드</a></li>
+                                <li><a href="#">캐릭터굿즈</a></li>
+                                <li><a href="#">기프트샵</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이 벤 트</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">SPECIAL</a></li>
+                                <li><a href="#">무대인사/시사회</a></li>
+                                <li><a href="#">제휴</a></li>
+                                <li><a href="#">멤버쉽/클럽</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">극 장</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">전체 극장</a></li>
+                                <li><a href="#">특별관</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- 고정헤더 -->
+                <h1 class="fix-logo"><a href="#"><img src="./images/fixed-header-logo.png" alt="CGV로고(고정헤더)"></a></h1>
+                <ul class="gnb-list">
+                    <li><a href="#"><img src="./images/search.png" alt="검색"></a></li>
+                    <li><a href="#"><img src="./images/ticket.png" alt="티켓"></a></li>
+                    <li><a href="#"><img src="./images/user.png" alt="사용자자"></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인영역 -->
+    <main>
+        <!-- 메인화면 - 팀장님 -->
+        <section class="main-visual-wrap">
+            <div class="video-inner active">
+                <h2 class="blind">메인영역</h2>
+                <div class="main-video">
+                    <video src="./video/mov-teaser.mp4" autoplay muted playsinline></video>
+                </div>
+                <div class="visual-overlay">
+                    <img src="./images/main-mov-text-logo.png" alt="원더랜드 로고">
+                    <div class="head-btn-wrap">
+                        <a href="#" class="btn-reserv">예매하기</a>
+                        <a href="#" class="btn-view">자세히보기</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영상재생 종료 후 화면 -->
+            <div class="video-end-inner">
+                <h2 class="blind">메인 영역</h2>
+                <div class="main-video">
+                    <img src="./images/mov-teaser.png" alt="재생종료 후 화면">
+                </div>
+                <div class="visual-overlay">
+                    <img src="./images/main-mov-text-logo.png" alt="영화제목 로고">
+                    <div class="head-btn-wrap">
+                        <a href="#" class="btn-reserv">예매하기</a>
+                        <a href="#" class="btn-view">자세히보기</a>
+                    </div>
+                    <div class="scroll-arrow"><img src="./images/arrow.png" alt="스크롤 화살표"></div>
+                </div>
+            </div>
+        </section>
+        <!-- movie-section -->
+        <section class="movie-section">
+            <div class="inner">
+                <div class="section-name">
+                    <h2>MOVIE CHART</h2>
+                    <P>무비차트</P>
+                </div>
+                <div class="movie-btn-wrap">
+                    <ul class="m-button-list">
+                        <li><a href="#">NEW영화</a><span>|</span></li>
+                        <li><a href="#">박스오피스</a><span>|</span></li>
+                        <li><a href="#">개봉예정영화<span>|</span></a></li>
+                        <li><a href="#">관람객수</a></li>
+                    </ul>
+                    <div class="more-btn">
+                        <a href="#">MORE ></a>
+                    </div>
+                </div>
+                <div class="movie-wrap">
+                    <ul class="movie-list">
+                        <li>
+                            <div class="poster-box">
+                                <div class="click">
+                                    <button class="heart-btn" aria-label="찜하기"></button>
+                                    <img src="./images/movie/poster-1.png" alt="">
+                                    <p class="rank">1</p>
+                                </div>
+
+                                <div class="blind">
+                                    <div class="blind-1">
+                                        <p class="b-title">드래곤 길들이기</p>
+                                        <p class="genres">장르 : #액션 #모험 #판타지 #SF</p>
+                                    </div>
+                                    <div class="zulgeri">
+                                        <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                        <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-box">
+                                <img src="./images/movie/poster-ticket.png" alt="">
+                                <div class="text-box">
+                                    <div class="movie-title">
+                                        <p class="age-box one">12</p>
+                                        <h3>드래곤 길들이기</h3>
+                                    </div>
+                                    <div class="title-sub">
+                                        <img class="egg" src="./images/movie/egg1.png" alt="">
+                                        <p>95%</p>
+                                        <p>예매율 50.9%</p>
+                                        <p>누적 1000만</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-box">
+                                <button class="buy">예매하기</button><button>상세보기</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="poster-box">
+                                <div class="click">
+                                    <button class="heart-btn" aria-label="찜하기"></button>
+                                    <img src="./images/movie/poster-2.png" alt="">
+                                    <p class="rank">2</p>
+                                </div>
+
+
+                                <div class="blind">
+                                    <div class="blind-1">
+                                        <p class="b-title">주토피아</p>
+                                        <p class="genres">장르 : #애니메이션 #모험 #판타지 #SF</p>
+                                    </div>
+                                    <div class="zulgeri">
+                                        <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                        <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-box">
+                                <img src="./images/movie/poster-ticket.png" alt="">
+                                <div class="text-box">
+                                    <div class="movie-title">
+                                        <p class="age-box two">ALL</p>
+                                        <h3>주토피아</h3>
+                                    </div>
+                                    <div class="title-sub">
+                                        <img class="egg" src="./images/movie/egg2.png" alt="">
+                                        <p>95%</p>
+                                        <p>예매율 50.9%</p>
+                                        <p>누적 1000만</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-box">
+                                <button class="buy">예매하기</button><button>상세보기</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="poster-box">
+                                <div class="click">
+                                    <button class="heart-btn" aria-label="찜하기"></button>
+                                    <img src="./images/movie/poster-3.png" alt="">
+                                    <p class="rank">3</p>
+                                </div>
+
+
+                                <div class="blind">
+                                    <div class="blind-1">
+                                        <p class="b-title">국보</p>
+                                        <p class="genres">장르 : #드라마 #문학 #예술 #SF</p>
+                                    </div>
+                                    <div class="zulgeri">
+                                        <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                        <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-box">
+                                <img src="./images/movie/poster-ticket.png" alt="">
+                                <div class="text-box">
+                                    <div class="movie-title">
+                                        <p class="age-box three">15</p>
+                                        <h3>국보</h3>
+                                    </div>
+                                    <div class="title-sub">
+                                        <img class="egg" src="./images/movie/egg2.png" alt="">
+                                        <p>95%</p>
+                                        <p>예매율 50.9%</p>
+                                        <p>누적 1000만</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-box">
+                                <button class="buy">예매하기</button><button>상세보기</button>
+                            </div>
+                        </li>
+
+
+
+
+                        <li>
+                            <div class="poster-box">
+                                <div class="click">
+                                    <button class="heart-btn" aria-label="찜하기"></button>
+                                    <img src="./images/movie/poster-4.png" alt="">
+                                    <p class="rank">4</p>
+                                </div>
+
+
+
+                                <div class="blind">
+                                    <div class="blind-1">
+                                        <p class="b-title">직장상사 길들이기</p>
+                                        <p class="genres">장르 : #액션 #모험 #판타지 #공포</p>
+                                    </div>
+                                    <div class="zulgeri">
+                                        <p>수백년간 지속되어온 바이킹과 드래곤의 전쟁.</p><br>
+                                        <p>드래곤을 없애는 것이 삶의 모든 목적인 바이킹들과</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                        <p> 다른 신념을 가진 ‘히컵’은
+                                            무리 속에 속하지 못하고 족장인 아버지에게도 인정받지 못하는데</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ticket-box">
+                                <img src="./images/movie/poster-ticket.png" alt="">
+                                <div class="text-box">
+                                    <div class="movie-title">
+                                        <p class="age-box four">19</p>
+                                        <h3>직장상사 길들이기</h3>
+                                    </div>
+                                    <div class="title-sub">
+                                        <img class="egg" src="./images/movie/egg3.png" alt="">
+                                        <p>95%</p>
+                                        <p>예매율 50.9%</p>
+                                        <p>누적 1000만</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-box">
+                                <button class="buy">예매하기</button><button>상세보기</button>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+        <section class="CGV-event">
+            <div class="inner">
+                <!-- section Menu -->
+                <h2 class="section-title">CGV EVENT<span class="sub-title">혜택 / 이벤트</span></h2>
+
+                <div class="menu-wrap">
+
+                    <div class="btn-wrap">
+                        <button class="button active">special</button>
+                        <button>영화 / 극장</button>
+                        <button>제휴</button>
+                        <button>멤버십</button>
+                        <button>지난 이벤트</button>
+
+                    </div>
+                </div>
+
+
+                <!-- Main slider -->
+                <div class="main-slider-wrap">
+                    <div class="main-slider-list">
+                        <div class="main-slider">
+                            <div class="slider">
+                                <div class="banner"><a href="#"><img src="./images/benefit/1-special/main-banner-1.jpg"
+                                            alt=""></a></div>
+                                <div class="banner"><a href="#"><img src="./images/benefit/1-special/main-banner-2.jpg"
+                                            alt=""></a></div>
+                                <div class="banner"><a href="#"><img src="./images/benefit/1-special/main-banner-3.jpg"
+                                            alt=""></a></div>
+                                <div class="banner"><a href="#"><img src="./images/benefit/1-special/main-banner-4.jpg"
+                                            alt=""></a></div>
+                                <div class="banner"><a href="#"><img src="./images/benefit/1-special/main-banner-5.jpg"
+                                            alt=""></a></div>
+                                <div class="banner"><a href="#"><img src="./images/benefit/1-special/main-banner-6.jpg"
+                                            alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="arrow-btn-wrap">
+                            <li class="arrow-btn-left">
+                                <a href="#"><img src="./images/left-arrow.png" alt="">
+                                </a>
+                            </li>
+                            <li class="arrow-btn-right">
+                                <a href="#"><img src="./images/right-arrow.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="indicators">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <!-- slider-arrow-btn + indicators -->
+
+
+                    <!-- page-list -->
+                    <div class="page-list-wrap">
+                        <div class="page-list">
+                            <ul class="page1">
+                                <li>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <img src="./images/benefit/1-special/sub-banner-1.jpg" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <p class="title">&lt;스폰지밥 무비:네모바지를 찾아서&gt; That's the Ticket</p>
+                                            <p class="desc">NO.114 <스폰지밥 무비 : 네모바지를 찾아서> 댓츠 더 티켓 !! 지금 바로 CGV에서
+                                                    만나보세요
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <img src="./images/benefit/1-special/sub-banner-2.jpg" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <p class="title">
+                                                <끝이 없는 스칼렛> That’s the Ticket NO.115
+                                            </p>
+                                            <p class="desc">NO.114 댓츠 더 티켓 !! 지금 바로 CGV에서 만나보세요</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <img src="./images/benefit/1-special/sub-banner-3.jpg" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <p class="title">
+                                                <직장상사 길들이기> That’s the Ticket NO.117
+                                            </p>
+                                            <p class="desc">NO.114 댓츠 더 티켓 !! 지금 바로 CGV에서 만나보세요</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="page2">
+                                <li>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <img src="./images/benefit/1-special/sub-banner-4.jpg" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <p class="title">&lt;스폰지밥 무비:네모바지를 찾아서&gt; That's the Ticket</p>
+                                            <p class="desc">NO.114 댓츠 더 티켓 !! 지금 바로 CGV에서 만나보세요</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <img src="./images/benefit/1-special/sub-banner-5.jpg" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <p class="title">&lt;스폰지밥 무비:네모바지를 찾아서&gt; That's the Ticket</p>
+                                            <p class="desc">NO.114 댓츠 더 티켓 !! 지금 바로 CGV에서 만나보세요</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <img src="./images/benefit/1-special/sub-banner-6.jpg" alt="">
+                                        </div>
+                                        <div class="text-box">
+                                            <p class="title">&lt;스폰지밥 무비:네모바지를 찾아서&gt; That's the Ticket</p>
+                                            <p class="desc">NO.114 댓츠 더 티켓 !! 지금 바로 CGV에서 만나보세요</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- pager-btn -->
+                        <div class="pager-btn">
+                            <div class="left-btn"><a href="#"><img src="./images/left-arrow.png" alt=""></a></div>
+                            <span class="curr-num">1</span> / <span class="total-num">2</span>
+                            <div class="right-btn"><a href="#"><img src="./images/right-arrow.png" alt=""></a></div>
+                        </div>
+                    </div>
+
+                    <!-- More-btn -->
+                    <div class="event-more-btn">
+                        <a href="#"><span>MORE</span><img src="./images/more-arrow.png" alt=""></img></a>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- 지금 받을 수 있는 혜택 -->
+                <div class="benefit-wrap">
+                    <h3 class="benefit-title">지금 받을 수 있는 혜택</h3>
+                    <ul class="benefit-list">
+                        <li><a href="#"><img src="./images/benefit/common-banner-1.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/benefit/common-banner-2.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/benefit/common-banner-3.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/benefit/common-banner-4.png" alt=""></a></li>
+                        <li><a href="#"><img src="./images/benefit/common-banner-5.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 광고배너 -->
+        <div class="ad-banner-wrap">
+            <div class="ad-banner">
+                <p>모일수록 더 풍성하고 즐거워진다!</p>
+                <strong>cgv 단체/대관 서비스<a href="#" class="btn">자세히보기</a></strong>
+            </div>
+            <img src="./images/benefit/ad-banner.png" alt="">
+        </div>
+
+        <!-- <special-section -->
+        <section class="special-section">
+            <div class="inner">
+                <div class="section-name">
+                    <h2>CGV SPECIAL THEATER </h2>
+                    <P>특별관</P>
+                </div>
+                <div class="btn-wrap">
+                    <button class="button active">전체관</button>
+                    <button>특별관</button>
+                    <button>고급관</button>
+                    <button>컨셉관</button>
+                </div>
+
+                <div class="circle">
+                    <ul class="theater-list">
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-2.png" alt=""></div>
+                            <div class="text-box">
+                                <p>특별한 오감체험</p>
+                                <p class="title">4DX</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-3.png" alt=""></div>
+                            <div class="text-box">
+                                <p>최대치의 공감각</p>
+                                <p class="title">URTRA 4DX</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-4.png" alt=""></div>
+                            <div class="text-box">
+                                <p>궁극의 몰입감</p>
+                                <p class="title">IMAX</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-5.png" alt=""></div>
+                            <div class="text-box">
+                                <p>차세대 몰입형 사운드</p>
+                                <p class="title">DOLBY ATOMS</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-6.png" alt=""></div>
+                            <div class="text-box">
+                                <p>3D 입체음향</p>
+                                <p class="title">SOUNDX</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-7.png" alt=""></div>
+                            <div class="text-box">
+                                <p>호텔 프리미어 상영관</p>
+                                <p class="title">SUITE CINEMA</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-8.png" alt=""></div>
+                            <div class="text-box">
+                                <p>셰프가 있는 영화관</p>
+                                <p class="title">CINE de CHEF</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-9.png" alt=""></div>
+                            <div class="text-box">
+                                <p>프리미엄 모션 베드 상영관</p>
+                                <p class="title">TEMPUR CINEMA</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-10.png" alt=""></div>
+                            <div class="text-box">
+                                <p>프리미어 소파 상영관</p>
+                                <p class="title">GOLD CLASS</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-11.png" alt=""></div>
+                            <div class="text-box">
+                                <p>대관형 프리미어 상영관</p>
+                                <p class="title">THE PRIVATE CINEMA</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-12.png" alt=""></div>
+                            <div class="text-box">
+                                <p>리클라이너 상영관</p>
+                                <p class="title">PREMIUM</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-13.png" alt=""></div>
+                            <div class="text-box">
+                                <p>신개념 소셜 상영관</p>
+                                <p class="title">CINE & LIVING ROOM</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-14.png" alt=""></div>
+                            <div class="text-box">
+                                <p>자연 컨셉의 힐링 상영관</p>
+                                <p class="title">CINE & FOREST</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="img-box"><img src="./images/special/special-slider-1.png" alt=""></div>
+                            <div class="text-box">
+                                <p>3면 확장 스크린</p>
+                                <p class="title">SCREEN X</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="next-button">
+                    <div class="left"><a href="#"><img src="./images/special/arrow-left.png" alt=""></a></div>
+                    <div class="right"><a href="#"><img src="./images/special/arrow-right.png" alt=""></a></div>
+                </div>
+            </div>
+        </section>
+        <!-- notice-section -->
+        <section class="notice-section">
+            <div class="notice">
+                <div class="inner">
+                    <div class="notice-top-wrap">
+                        <ul class="top-list">
+                            <li>
+                                <div class="notice-section-name">
+                                    <h2>NOTICE</h2>
+                                    <p>공지사항</p>
+                                    <img src="./images/footer/footer-arrow.png" alt="footer-arrow">
+                                </div>
+
+
+                            </li>
+                            <li>
+
+                                <P>2025.07.15 </P>
+                                <br>
+                                <P>[CGV] 서비스 이용 규정 변경 안내</P>
+                            </li>
+                            <li><a href="#">
+                                    <p>MORE</p>
+                                    <img src="./images/more-arrow.png" alt="더보기 화살표">
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="icon-list-wrap">
+                <ul class="icon-list">
+                    <li>
+                        <a href="#">
+                            <img src="./images/footer/reservation.png" alt="단체 대관">
+                            <p>단체 대관</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/footer/credit-card.png" alt="대량 구매">
+                            <p>대량 구매</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/footer/chats.png" alt="1:1 문의">
+                            <p>1:1 문의</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/footer/lost-item.png" alt="분실물">
+                            <p>분실물</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/footer/headset.png" alt="고객 센터">
+                            <p>고객센터</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- footer -->
+        <footer>
+            <div class="inner">
+
+                <h2 class="footer-logo"><img src="./images/footer/footer-cgv-logo.png" alt="">
+                </h2>
+
+                <div class="footer-middle">
+                    <address>
+                        <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
+                        <p>통신판매업신고번호 : 2017-서울용산-0662사업자정보확인</p>
+                        <p>사업자등록번호 : 104-81-45690</p>
+                        <p>호스팅사업자 : CJ올리브네트웍스</p>
+                        <p> 대표이메일 : cjcgvmaster@cj.net</p>
+                    </address>
+                    <ul class="qr-list">
+                        <li>
+                            <p>QR코드 찍고</p>
+                            <p>CGV 앱에서 자세히 보기</p>
+                            <P>QR코드를 스캔해보세요</P>
+                        </li>
+                        <li><img src="./images/footer/footer-qr.png" alt="CGV QR"></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <div class="f-inner-left">
+                        <select class="select-company">
+                            <optgroup label="CJ그룹">
+                                <option>CJ주식회사</option>
+                            </optgroup>
+                            <optgroup label="식품 & 식품서비스">
+                                <option>CJ제일제당</option>
+                                <option>CJ푸드빌</option>
+                                <option>CJ프레시웨이</option>
+                            </optgroup>
+                            <optgroup label="생명공학">
+                                <option>CJ제일제당 BIO사업부문</option>
+                                <option>CJ Feed&Care</option>
+                            </optgroup>
+                            <optgroup label="물류 & 신유통">
+                                <option>CJ대한통운</option>
+                                <option>CJ대한통운 건설부문</option>
+                                <option>CJ올리브영/option>
+                                <option>CJ올리브네트웍스</option>
+                                <option>CJ ENM 커머스부문</option>
+                            </optgroup>
+                            <optgroup label="엔터테인먼트 & 미디어">
+                                <option>CJ ENM 엔터테인먼트부문</option>
+                                <option>CJ CGV</option>
+                            </optgroup>
+                        </select>
+                        <ul class="bt-list">
+                            <li>채용정보</li>
+                            <li>이용약관</li>
+                            <li>개인정보처리방침</li>
+                            <li>위치기반서비스 이용약관</li>
+                        </ul>
+                    </div>
+                    <ul class="sns-list">
+                        <li><a href="#"><img src="./images/footer/kakao.png" alt="카카오톡"></a></li>
+                        <li><a href="#"><img src="./images/footer/instagram.png" alt="인스타"></a></li>
+                        <li><a href="#"><img src="./images/footer/youtube.png" alt="유튜브"></a></li>
+                        <li><a href="#"><img src="./images/footer/X.png" alt="트위터"></a></li>
+                    </ul>
+                </div>
+
+
+
+
+            </div>
+        </footer>
+
+</body>
+
+</html>
