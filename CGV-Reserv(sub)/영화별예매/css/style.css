@@ -10,6 +10,11 @@ body {
     margin: 0 auto;
 }
 
+h3 {
+    margin-top: 45px;
+    margin-bottom: 38px;
+}
+
 /* header */
 header {
     position: absolute;
@@ -161,9 +166,65 @@ header {
     text-decoration: underline;
 }
 
+/* main */
+/* 탭메뉴 */
+.tab-list ul {
+    display: flex;
+    gap: 10px;
+    padding-top: 65px;
+}
+
+.tab-list li>a {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+    padding: 12px 28px;
+}
+
+.tab-list li>a.active {
+    background: rgba(255, 0, 0, 0.5);
+}
+
 /* 인기상영작 TOP10 */
+.popular-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-list {
+    overflow: hidden;
+}
+
+.popular-list ul {
+    display: flex;
+    gap: 45px;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+.popular-list li {
+    flex: 0 0 calc((100% - 135px) / 4);
+}
+
+.popular-list {
+    width: 100%;
+    border-radius: 24px;
+}
+
+/* arrow */
+.arrow-wrap {
+    display: flex;
+}
 
 /* 신규개봉작 */
+.new-list {
+    display: flex;
+    gap: 45px;
+}
+
+.new-list img {
+    border-radius: 24px;
+    max-width: 341px;
+}
 
 /* 전체영화 */
 
