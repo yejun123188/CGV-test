@@ -187,11 +187,6 @@ header {
 /* 인기상영작 TOP10 */
 .popular-wrap {
     position: relative;
-    overflow: hidden;
-}
-
-.popular-list {
-    overflow: hidden;
 }
 
 .popular-list ul {
@@ -199,13 +194,14 @@ header {
     gap: 45px;
     margin-left: 45px;
     margin-right: 45px;
+    overflow: hidden;
 }
 
 .popular-list li {
     flex: 0 0 calc((100% - 135px) / 4);
 }
 
-.popular-list {
+.popular-list img {
     width: 100%;
     border-radius: 24px;
 }
@@ -213,20 +209,81 @@ header {
 /* arrow */
 .arrow-wrap {
     display: flex;
+    justify-content: space-between;
+}
+
+.left-arrow {
+    margin-top: -17%;
+}
+
+.right-arrow {
+    margin-top: -17%;
 }
 
 /* 신규개봉작 */
-.new-list {
+.new-list-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.new-list ul {
     display: flex;
     gap: 45px;
+    margin-left: 45px;
+    margin-right: 45px;
+    overflow: hidden;
+}
+
+.new-list li {
+    flex: 0 0 calc((100% - 135px) / 4);
 }
 
 .new-list img {
+    width: 100%;
     border-radius: 24px;
-    max-width: 341px;
 }
 
 /* 전체영화 */
+
+.tab-menu-wrap ul {
+    display: flex;
+    gap: 40px;
+}
+
+.tab-menu-wrap ul>li.active {
+    color: #EE3123;
+    margin-bottom: 35px;
+}
+
+.all-list-wrap {
+    position: relative;
+}
+
+.all-list ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+}
+
+.all-list img {
+    width: 100%;
+    border-radius: 24px;
+    display: block;
+}
+
+/* 예매상태바(고정) */
+.situation-wrap {
+    /* position: fixed; */
+    background: rgba(255, 255, 255, 0.7);
+    max-width: 1920px;
+    height: 75px;
+    z-index: 99999;
+    margin-top: 80px;
+}
+
+.situation-wrap li {
+    color: #000;
+}
 
 /* FOOTER */
 footer {
