@@ -1,0 +1,2190 @@
+/* 공통사항 */
+body {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#222222+0,171717+100 */
+    background: linear-gradient(to bottom, rgba(34, 34, 34, 1) 0%, rgba(17, 17, 17, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+}
+
+.inner {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* =================================================== */
+
+
+/* 헤더 */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-fix {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 60px;
+    padding: 0 160px;
+    align-items: center;
+    background: #222;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 30px rgba(13, 13, 13, 0.25);
+}
+
+.ham-btn>.ham-open,
+.ham-btn>.ham-inner {
+    display: none;
+}
+
+.ham-btn>.active {
+    display: block;
+}
+
+.ham-inner {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(20px);
+    z-index: 10000;
+}
+
+.ham-inner>.close-btn {
+    padding: 10px 160px 0 160px;
+}
+
+.ham-wrap {
+    background: rgba(0, 0, 0, 0.3);
+    margin: 0 160px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.ham-wrap>div {
+    background: rgba(0, 0, 0, 0.2);
+    height: 370px;
+}
+
+.ham-wrap>div>ul {
+    text-align: center;
+}
+
+.ham-wrap>div li {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+}
+
+.ham-wrap>div li:hover {
+    text-decoration: underline;
+}
+
+.ham-wrap>div li:first-child {
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+}
+
+.ham-wrap>div li:first-child:hover {
+    text-decoration: none;
+}
+
+.fix-logo>a>img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.header-fix .gnb-list {
+    display: flex;
+    gap: 15px;
+}
+
+.header-fix .gnb-list>li {
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-fix .gnb-list>.active {
+    width: 267px;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.header-fix .gnb-list>li:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/* =================================================== */
+/* 메인 */
+/* main => 상단 “상세페이지 바”(검정바) 디테일 살리기
+   - 네 구조상 .page-inner / .page-wrap 이 그 바 역할이라 여기 맞춤 */
+.page-inner {
+    margin-top: 60px;
+    background: rgba(34, 34, 34, .85) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .35) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .06) !important;
+}
+
+.page-inner>.page-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+    height: 76px !important;
+    padding-bottom: 0 !important;
+    margin: 0 160px;
+}
+
+.page-wrap>h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.page-wrap>.location>span {
+    font-size: 12px;
+    color: #707070;
+}
+
+.page-wrap>.location>span:last-child {
+    color: #DDD;
+    font-weight: 600;
+}
+
+.page-wrap>.location>span>a:hover {
+    text-decoration: underline;
+}
+
+/* 1.변수모음 */
+:root {
+    --bg: #121212;
+    --panel: #1a1a1a;
+    --panel2: #171717;
+    --line: rgba(255, 255, 255, .08);
+    --text: rgba(255, 255, 255, .92);
+    --muted: rgba(255, 255, 255, .65);
+    --muted2: rgba(255, 255, 255, .45);
+    --brand: #ff2a2a;
+    --accent: #ff3b3b;
+    --shadow: 0 16px 50px rgba(0, 0, 0, .55);
+    --radius: 16px;
+    --radius-sm: 12px;
+}
+
+
+
+
+
+/* =========================================================== */
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Pretendard", "Noto Sans KR", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+button {
+    font: inherit
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* ===== Icons (CSS only) ===== */
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--line);
+    background: rgba(0, 0, 0, .25);
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.icon-btn:hover {
+    border-color: rgba(255, 255, 255, .18)
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    opacity: .9
+}
+
+.icon--menu::before,
+.icon--menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+.icon--menu::before {
+    top: 4px
+}
+
+.icon--menu::after {
+    bottom: 4px
+}
+
+.icon--search::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border: 2px solid #fff;
+    border-radius: 999px;
+}
+
+.icon--search::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: #fff;
+    right: -2px;
+    bottom: 2px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+}
+
+.icon--ticket::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+}
+
+.icon--user::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 3px;
+    width: 8px;
+    height: 8px;
+    transform: translateX(-50%);
+    border: 2px solid #fff;
+    border-radius: 999px;
+}
+
+.icon--user::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    width: 14px;
+    height: 8px;
+    transform: translateX(-50%);
+    border: 2px solid #fff;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+
+/* 탭 아래 전체 컨텐츠 박스(큰 라운드 패널) */
+
+.section-wrap,
+/* 너가 wrapper 있으면 */
+.section.card,
+/* 기존 card 쓰는 경우 */
+.section-panel {
+    /* 없으면 새로 class 줘도 됨 */
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 28px;
+    padding: 26px 28px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, .40);
+}
+
+/* “트레일러/스틸컷” 제목 스타일 */
+.section-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, .92);
+    margin: 0 0 14px;
+}
+
+/* ------------------- */
+
+
+
+
+/* ===== Topbar ===== */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10, 10, 10, .65);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.topbar__inner {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1120px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+.topbar__right {
+    display: flex;
+    gap: 10px
+}
+
+.brand {
+    margin: 0;
+    font-weight: 900;
+    letter-spacing: .5px;
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.brand__dot {
+    color: #fff;
+    font-size: 22px
+}
+
+.brand__star {
+    color: var(--brand);
+    font-size: 18px;
+    transform: translateY(1px)
+}
+
+
+
+
+.breadcrumb {
+    margin: 0 0 18px;
+    color: rgba(255, 255, 255, .85);
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+
+
+.badge-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+/* 2) 뱃지(돌비/4dx/imax…) : 2번처럼 “첫번째 밝게, 나머지 어둡게” */
+.badge {
+    font-size: 12px !important;
+    font-weight: 800;
+    letter-spacing: .3px;
+    padding: 6px 10px !important;
+    border-radius: 999px !important;
+    color: rgba(255, 255, 255, .92) !important;
+    background: rgba(0, 0, 0, .45) !important;
+    border: 1px solid rgba(255, 255, 255, .14) !important;
+}
+
+.badge-row .badge:first-child {
+    background: rgba(255, 255, 255, .18) !important;
+    /* DOLBY ATMOS만 밝게 */
+    border-color: rgba(255, 255, 255, .16) !important;
+}
+
+/* ----- */
+.badge--ghost {
+    background: rgba(0, 0, 0, .25);
+}
+
+.meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.dot {
+    opacity: .5
+}
+
+.score-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.score-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #ffd84a;
+    box-shadow: 0 0 0 6px rgba(255, 216, 74, .12);
+}
+
+.score {
+    font-weight: 900
+}
+
+.score-sub {
+    color: var(--muted);
+    font-size: 13px
+}
+
+.hash {
+    /*  해시태그 칩( #액션영화 … ) */
+    background: rgba(0, 0, 0, .28) !important;
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 255, 255, .14) !important;
+    color: rgba(255, 255, 255, .75) !important;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .22);
+}
+
+/* main- => CTA 버튼(좋아요/공유/예매) : 2번 디테일(회색 pill + 빨강 pill) */
+.cta-row {
+    display: flex;
+    /* CTA 버튼 줄: 스샷처럼 약간 붙여서 */
+    gap: 10px !important;
+    align-items: center;
+}
+
+.cta-row .btn {
+    height: 40px !important;
+    padding: 0 16px !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, .10) !important;
+    /* 회색 반투명 */
+    border: 1px solid rgba(255, 255, 255, .18) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    color: rgba(255, 255, 255, .90) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .10) !important;
+}
+
+.cta-row .btn--ghost {
+    background: rgba(0, 0, 0, .28) !important;
+    /* 공유/좋아요 더 어둡게 */
+    border-color: rgba(255, 255, 255, .16) !important;
+}
+
+.cta-row .btn--primary {
+    background: linear-gradient(180deg, #ff4b4b, #e01414) !important;
+    /* 예매 빨강 */
+    border: none !important;
+    font-weight: 900 !important;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .35) !important;
+}
+
+
+/* ------ */
+
+.btn {
+    height: 38px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(255, 255, 255, .08);
+    /* 버튼도 살짝 더 유리감 */
+    backdrop-filter: blur(10px);
+    color: var(--text);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    border-color: rgba(255, 255, 255, .22)
+}
+
+.btn--primary {
+    border: none;
+    background: linear-gradient(180deg, var(--accent), #e51414);
+    font-weight: 900;
+}
+
+.btn--primary:hover {
+    filter: brightness(1.05)
+}
+
+.btn--ghost {
+    background: rgba(0, 0, 0, .28);
+}
+
+.btn--pill {
+    border-radius: 999px
+}
+
+.heart {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background:
+        radial-gradient(circle at 30% 35%, #fff 0 35%, transparent 36%),
+        radial-gradient(circle at 70% 35%, #fff 0 35%, transparent 36%),
+        conic-gradient(from 225deg at 50% 60%, #fff 0 90deg, transparent 0);
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .35));
+    opacity: .9;
+}
+
+/* 메인 - 무비제목 - CLEAN HERO + TABS */
+
+/* 2.변수모음   */
+
+:root {
+    --hero-h: clamp(520px, 56vw, 680px);
+    --fade-h: 160px;
+    --lift: 32px;
+}
+
+.hero {
+    position: relative;
+    height: var(--hero-h);
+    overflow: hidden;
+}
+
+/* blur bg */
+.hero-blur {
+    position: absolute;
+    inset: 0;
+    background: url("assets/hero.jpg") center/cover no-repeat;
+    filter: blur(28px) brightness(.6);
+    transform: scale(1.1);
+}
+
+/* real image */
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* shade */
+.hero__shade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .7) 60%),
+        linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .7));
+}
+
+/* bottom fade */
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--fade-h);
+    background: linear-gradient(to bottom,
+            rgba(18, 18, 18, 0),
+            #121212);
+}
+
+/* content */
+.hero__content {
+    position: relative;
+    height: 100%;
+}
+
+/* title + panel */
+.hero__main {
+    position: absolute;
+    left: 50%;
+    bottom: calc(var(--fade-h) - var(--lift));
+    transform: translateX(-50%);
+
+    width: min(1120px, calc(100% - 40px));
+    display: flex;
+
+    justify-content: flex-start !important;
+    /* 🔥 space-between 금지 */
+    align-items: flex-end;
+    gap: 16px;
+    /* 🔥 타이틀이랑 패널 간격(8~20 조절)*/
+}
+
+.main-1 {
+    flex: 0 0 auto !important;
+    /* 타이틀 영역이 과하게 늘어나 패널을 밀어내지 않게 */
+}
+
+/* title png */
+.hero-title-img {
+    width: 420px;
+    filter:
+        drop-shadow(0 6px 14px rgba(0, 0, 0, .7)) drop-shadow(0 0 30px rgba(0, 0, 0, .5));
+}
+
+/* right panel = transparent */
+.hero__panel {
+    background: none;
+    border: none;
+    padding: 0;
+    /* 패널 폭은 고정 느낌 */
+    flex: 0 0 520px !important;
+    width: 520px !important;
+    max-width: 520px !important;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, .6);
+}
+
+/* buttons restore */
+.hero__panel .btn {
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .14);
+    /* backdrop-filter: blur(10px); */
+}
+
+/* tabs */
+.tabs {
+    position: sticky;
+    top: 64px;
+    background: rgba(18, 18, 18, .72);
+    backdrop-filter: blur(10px);
+}
+
+.tabs__inner {
+    display: flex;
+    gap: 28px;
+    padding: 14px 0;
+}
+
+.tab {
+    color: #aaa;
+    font-weight: 700;
+}
+
+.tab.is-active {
+    color: var(--accent);
+}
+
+.tab.is-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px !important;
+    height: 3px !important;
+    background: var(--accent);
+}
+
+/* mobile */
+@media(max-width:980px) {
+    .hero__main {
+        position: static;
+        transform: none;
+        flex-direction: column;
+    }
+}
+
+
+
+/* =================================================== */
+
+/* ===== Tabs ===== */
+.tabs {
+    position: sticky;
+    top: 64px;
+    z-index: 50;
+    background: rgba(18, 18, 18, .72);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.tabs__inner {
+    display: flex;
+    gap: 28px;
+    padding: 14px 0;
+}
+
+.tab {
+    font-size: 14px;
+    color: rgba(255, 255, 255, .55);
+    font-weight: 700;
+    position: relative;
+    padding: 8px 2px;
+}
+
+.tab.is-active {
+    color: var(--accent);
+}
+
+/* 탭: 아래 빨간 라인 더 확실하게 */
+.tab.is-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    height: 3px;
+    background: var(--accent);
+}
+
+
+/* 탭 배경을 살짝 투명하게 + 위쪽 페이드 인 */
+.tabs::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -40px;
+    /* 위로 살짝 겹치게 */
+    height: 40px;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, .72) 100%);
+}
+
+/* =================================================== */
+
+/* 섹션1 */
+
+/* ===== Main ===== */
+.main {
+    padding-top: 0;
+    padding: 26px 0 40px
+}
+
+.section {
+    margin-top: 26px
+}
+
+.section-title {
+    margin: 0 0 14px;
+    font-size: 18px;
+    letter-spacing: .2px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.card {
+    /* 카드(영화정보/줄거리) : 스샷처럼 더 평평 + 넓게 */
+    background: transparent;
+    border: none;
+    border-radius: 18px;
+    padding: 0;
+}
+
+.info-list {
+    margin: 0 0 16px
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.info:last-child {
+    border-bottom: none
+}
+
+.info dt {
+    color: var(--muted2);
+    font-weight: 700
+}
+
+.info dd {
+    margin: 0;
+    color: rgba(255, 255, 255, .86)
+}
+
+.cast-row {
+    display: flex;
+    gap: 12px;
+    overflow: auto;
+    padding-bottom: 4px;
+}
+
+.cast {
+    min-width: 120px;
+    margin: 0;
+    background: rgba(0, 0, 0, .20);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.cast img {
+    border-radius: 14px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover
+}
+
+.cast figcaption {
+    padding: 10px 10px 12px;
+}
+
+.cast strong {
+    display: block;
+    font-size: 14px
+}
+
+.cast span {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.synopsis {
+    margin: 0;
+    color: rgba(255, 255, 255, .82);
+    line-height: 1.65;
+    font-size: 14px;
+}
+
+.more {
+    margin-top: 14px;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(0, 0, 0, .25);
+    color: var(--text);
+    cursor: pointer;
+}
+
+
+
+/* =================================================== */
+/* 섹션 1-2 */
+
+
+/* ================= TAB SWITCH (CSS only) ================= */
+
+.tab-switch {
+    margin-top: 18px;
+}
+
+/* radios hide */
+.tab-switch input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+/* tab bar */
+.tabbar {
+    display: flex;
+    gap: 28px;
+    padding: 10px 0 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.tabbtn {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, .55);
+    position: relative;
+    padding: 10px 2px;
+    user-select: none;
+}
+
+/* active styles */
+#tabInfo:checked~.tabbar label[for="tabInfo"],
+#tabReview:checked~.tabbar label[for="tabReview"] {
+    color: var(--accent);
+}
+
+#tabInfo:checked~.tabbar label[for="tabInfo"]::after,
+#tabReview:checked~.tabbar label[for="tabReview"]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -18px;
+    height: 3px;
+    background: var(--accent);
+}
+
+/* panels show/hide */
+.tabpanels .tabpanel {
+    display: none;
+    padding-top: 18px;
+}
+
+#tabInfo:checked~.tabpanels #panelInfo {
+    display: block;
+}
+
+#tabReview:checked~.tabpanels #panelReview {
+    display: block;
+}
+
+/* ============ REVIEW PANEL (스크샷 느낌) ============ */
+
+.review-box {
+    position: relative;
+    background: rgba(255, 255, 255, .06);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 28px;
+    padding: 22px 56px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, .35);
+}
+
+/* 좌우 둥근 버튼 */
+.rv-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: rgba(0, 0, 0, .28);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.rv-prev {
+    left: 14px;
+}
+
+.rv-next {
+    right: 14px;
+}
+
+.rv-nav::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid rgba(255, 255, 255, .85);
+    border-bottom: 2px solid rgba(255, 255, 255, .85);
+    transform: rotate(135deg);
+}
+
+.rv-next::before {
+    transform: rotate(-45deg);
+}
+
+.rv-nav:hover {
+    background: rgba(0, 0, 0, .42);
+    border-color: rgba(255, 255, 255, .22);
+}
+
+/* 카드 2x2 */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.review-card {
+    background: rgba(0, 0, 0, .18);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 14px;
+    padding: 14px 16px;
+    min-height: 92px;
+}
+
+
+.review-card img {
+    width: 45px;
+}
+
+/* 상단 */
+.rv-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.rv-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .22);
+}
+
+.rv-who {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    gap: 2px;
+}
+
+.rv-who strong {
+    font-size: 13px;
+    color: rgba(255, 255, 255, .92);
+}
+
+.rv-who span {
+    font-size: 11px;
+    color: rgba(255, 255, 255, .45);
+}
+
+.rv-badge {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .10);
+    border: 1px solid rgba(255, 255, 255, .12);
+    color: rgba(255, 255, 255, .85);
+}
+
+.rv-text {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(255, 255, 255, .78);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .review-box {
+        padding: 20px 48px;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+/* =================================================== */
+
+/* 섹션2 */
+
+
+
+
+
+
+
+/* Trailer */
+.trailer-row {
+    display: grid;
+    /* 지금은 3개라서 4칸이면 빈칸 생김 → 자동으로 3개면 3개만 채우게 */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.thumb {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .10);
+    background: rgba(0, 0, 0, .18);
+    transition: transform .18s ease, border-color .18s ease, filter .18s ease;
+}
+
+.thumb img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    filter: saturate(1.05) contrast(1.05);
+    transform: scale(1.01);
+}
+
+.thumb:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, .18);
+    filter: brightness(1.05);
+}
+
+
+.thumb__label {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .55);
+    border: 1px solid rgba(255, 255, 255, .14);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* Still컷 : 가로 슬라이더 느낌*/
+
+.still-wrap {
+    /*※지워야할수도있음※ 스틸컷 영역 wrapper 있으면 */
+    position: relative;
+}
+
+
+.still-wrap .still img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    filter: saturate(1.05) contrast(1.05);
+}
+
+.still-wrap .still:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, .18);
+}
+
+
+
+
+
+
+
+/* ===== 트레일러 ↔ 스틸컷 단락 구분 (그라데이션 라인) ===== */
+/* 트레일러 끝나고 바로 나오는 “스틸컷” 제목에 라인 만들어줌 */
+.still-wrap>.section-title:nth-of-type(2) {
+    position: relative;
+    padding-top: 18px;
+    margin-top: 6px;
+}
+
+.still-wrap>.section-title:nth-of-type(2)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, .12),
+            rgba(255, 255, 255, 0));
+}
+
+
+/* 이 섹션이 큰 라운드 패널 역할 */
+.section.section-panel.still-wrap {
+    position: relative;
+    border-radius: 28px;
+    padding: 26px 28px 34px;
+    background: rgba(255, 255, 255, .06);
+    border: 0px solid rgba(255, 255, 255, .06);
+    box-shadow: 0 18px 60px rgba(10, 10, 10, 0.38);
+    overflow: hidden;
+}
+
+/* 섹션 제목 */
+.still-wrap>.section-title {
+    margin: 0 0 14px;
+    font-size: 18px;
+    font-weight: 800;
+    color: rgba(255, 255, 255, .92);
+}
+
+/* ------ */
+
+.still-strip {
+    position: relative;
+    display: flex;
+    gap: 14px;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 18px;
+}
+
+.still-strip::-webkit-scrollbar {
+    height: 8px;
+}
+
+
+.still-strip::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, .16);
+    border-radius: 999px;
+}
+
+
+.still {
+    min-width: 300px;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .10);
+    background: rgba(0, 0, 0, .18);
+    scroll-snap-align: start;
+    transition: transform .18s ease, border-color .18s ease;
+}
+
+
+.still:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, .18);
+}
+
+.still img {
+    height: 190px;
+    width: 100%;
+    object-fit: cover;
+    filter: saturate(1.05) contrast(1.05);
+}
+
+/* ===== still-grid (아래 3개 카드) ===== */
+.still-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+
+}
+
+.still-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .10);
+    background: rgba(0, 0, 0, .18);
+    transition: transform .18s ease, border-color .18s ease;
+}
+
+
+
+.still-wrap .still-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, .18);
+}
+
+.still-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    filter: saturate(1.05) contrast(1.05);
+}
+
+.still-card__cap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, .55);
+    border: 1px solid rgba(255, 255, 255, .16);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-weight: 800;
+    font-size: 12px;
+}
+
+
+
+/* ===== 스틸컷 아래 페이드 + “더보기 ▼” 버튼 ===== */
+/* still-grid 아래에 “페이드로 다음 단락” 느낌 */
+.section.section-panel.still-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 140px;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, .65) 40%,
+            rgba(255, 255, 255, .06); 100%);
+}
+
+/* ▼ 더보기 버튼 (HTML에 버튼 하나만 추가하면 됨)
+   <button class="more-arrow" ...></button> 를 섹션 마지막에 넣어줘 */
+.still-wrap .more-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    background: rgba(0, 0, 0, .42);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 8;
+    transition: .2s ease;
+}
+
+.still-wrap .more-arrow:hover {
+    transform: translateX(-50%) translateY(-3px);
+    background: rgba(0, 0, 0, .60);
+    border-color: rgba(255, 255, 255, .30);
+}
+
+.still-wrap .more-arrow::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid rgba(255, 255, 255, .9);
+    border-bottom: 2px solid rgba(255, 255, 255, .9);
+    transform: rotate(45deg);
+}
+
+
+
+/* ===== 반응형 ===== */
+@media (max-width: 980px) {
+    .still-wrap .trailer-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .still-wrap .still {
+        min-width: 260px;
+    }
+
+    .still-wrap .still-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .still-wrap .slider-btn {
+        top: 58%;
+    }
+
+    /* 화면 줄면 버튼 위치 살짝 */
+}
+
+@media (max-width: 520px) {
+    .section.section-panel.still-wrap {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .still-wrap .trailer-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================== 한 섹션 안에서 스틸컷만 페이드+더보기 고정 ================== */
+
+/* still-wrap은 큰 패널 유지 */
+.section.section-panel.still-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ✅ 스틸컷/트레일러 파트만 상대 기준 */
+.still-wrap .media-part {
+    position: relative;
+    padding-bottom: 80px;
+    /* 더보기 버튼 자리 */
+}
+
+/* ✅ 페이드(그라데이션)는 media-part 하단에만 */
+.still-wrap .media-part::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 300px;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, .65) 60%,
+            rgb(48, 48, 48) 100%);
+}
+
+/* ✅ 더보기 버튼도 media-part 하단에 고정 */
+.still-wrap .media-part .more-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    background: rgba(0, 0, 0, .42);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+
+    /* 텍스트는 숨기고 ▼만 */
+    font-size: 1;
+}
+
+/* ▼ */
+.still-wrap .media-part .more-arrow::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid rgba(255, 255, 255, .9);
+    border-bottom: 2px solid rgba(255, 255, 255, .9);
+    transform: rotate(45deg);
+    display: block;
+}
+
+.still-wrap .media-part .more-arrow:hover {
+    background: rgba(0, 0, 0, .60);
+    border-color: rgba(255, 255, 255, .30);
+    transform: translateX(-50%) translateY(-3px);
+}
+
+/* ✅ Event 파트는 그라데이션 아래에 자연스럽게 이어지게 패딩만  */
+.still-wrap .section-event {
+    padding-top: 22px;
+}
+
+/* ===스틸컷 누르면 팝업뷰== */
+
+
+/* 전체 감싸는 틀 */
+#modalContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* 중앙 정렬을 위해 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 어두운 배경 레이어 */
+
+.modal-close {
+    background: transparent;
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* 0.7이 투명도(Alpha)입니다 */
+}
+
+/* 흰색 팝업 박스 */
+.modal-content {
+    position: relative;
+    /* 배경보다 위에 뜨게 함 */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    height: 650px;
+    border-radius: 8px;
+    z-index: 1001;
+    /* 배경(overlay)보다 높아야 함 */
+}
+
+.stillcut-list {
+    align-items: center;
+    position: absolute;
+    display: flex;
+    padding-right: 55px;
+    margin-top: 50px;
+    gap: 10px;
+}
+
+
+
+/* 숨김 처리용 클래스 */
+.hidden {
+    display: none !important;
+}
+
+
+
+
+
+/* ================== SYNOPSIS MORE (현재 마크업 기반) ================== */
+
+/* 토글 체크박스 숨김 */
+.syn-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+/* 기본: 3줄만 보이게 (원하면 숫자만 바꾸면 됨) */
+.synopsis.syn-text {
+    margin: 0;
+    line-height: 1.65;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .82);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    /* CGV 줄거리 페이드 + 더보기 플로팅  */
+    position: relative;
+    max-height: 140px;
+    overflow: hidden;
+    transition: max-height .4s ease;
+}
+
+
+/* 페이드 */
+.synopsis.syn-text::after {
+    /* CGV 줄거리 페이드 + 더보기 플로팅 */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, .7) 60%,
+            rgba(18, 18, 18, 1) 100%);
+}
+
+/* ✅ 기존 .more 버튼 스타일을 label에도 그대로 먹이기 */
+.synopsis-card .more {
+    /* 더보기 버튼 (페이드 위 중앙 떠있기)  */
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    transition: .25s;
+    z-index: 5;
+    margin-top: 14px;
+    height: 38px;
+    padding: 0 22px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    background: rgba(0, 0, 0, 45);
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+}
+
+/* ▼ 아이콘 */
+.synopsis-card .more::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid rgba(255, 255, 255, .85);
+    border-bottom: 2px solid rgba(255, 255, 255, .85);
+    transform: rotate(45deg);
+}
+
+/* 접기 텍스트는 기본 숨김 */
+.synopsis-card .more .txt-less {
+    display: none;
+}
+
+/* ✅ 체크되면: clamp 해제 → 내용만큼 자연 확장(아래 섹션도 자연스럽게 내려감) */
+.syn-toggle:checked~.synopsis.syn-text {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+/* 체크되면 버튼 텍스트/아이콘 변경 */
+.syn-toggle:checked~.more .txt-more {
+    display: none;
+}
+
+.syn-toggle:checked~.more .txt-less {
+    display: inline;
+}
+
+.syn-toggle:checked~.more::after {
+    transform: rotate(-135deg);
+}
+
+/* ▲ */
+
+.synopsis-card .more:hover {
+    border-color: rgba(255, 255, 255, .12);
+    transform: translateX(-50%) translateY(-2px);
+    background: rgba(0, 0, 0, .35);
+}
+
+/*  CGV 줄거리 페이드 + 더보기 플로팅 => 펼쳐진 상태 */
+.synopsis-card.is-open .synopsis {
+    max-height: 1000px;
+}
+
+.synopsis-card.is-open .synopsis::after {
+    display: none;
+}
+
+.synopsis-card.is-open .more {
+    position: relative;
+    margin: 20px auto 0;
+    bottom: auto;
+    transform: none;
+}
+
+
+
+
+
+/* == SYNOPSIS FADE (접힘 상태에서만) == */
+
+/* 줄거리 카드에서 페이드 오버레이를 올리기 위한 기준 */
+.synopsis-card {
+    position: relative;
+}
+
+/* 접힘 상태(기본)에서만 페이드가 보이게 */
+.synopsis-card .synopsis.syn-text {
+    position: relative;
+    padding-bottom: 10px;
+    /* 페이드랑 겹칠 여백 */
+}
+
+/* 페이드 오버레이: 접힘 상태에서만 */
+.synopsis-card .synopsis.syn-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 56px;
+    /* 페이드 높이 */
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, .85) 100%,
+            rgb(0, 0, 0) 100%);
+}
+
+/* ✅ 펼쳐졌을 때는 페이드 제거 */
+.syn-toggle:checked~.synopsis.syn-text::after {
+    display: none;
+}
+
+
+.syn-toggle {
+    display: none;
+}
+
+
+/* ================== STILL CUT : 페이드 + 더보기 플로팅 + 펼침 ================== */
+
+/* 스틸컷 영역 기준 */
+.stillcut-box {
+    position: relative;
+    padding-bottom: 78px;
+    /* 더보기 버튼 자리 */
+}
+
+/* ✅ 접힘 상태에서: still-grid를 일정 높이까지만 보여주기 */
+.stillcut-box .still-grid {
+    max-height: 210px;
+    /* 접혔을 때 보이는 높이(원하면 180~260 조절) */
+    overflow: hidden;
+    transition: max-height .35s ease;
+}
+
+/* ✅ 접힘 상태 페이드 */
+.stillcut-box::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 140px;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, .65) 55%,
+            rgba(18, 18, 18, 1) 100%);
+}
+
+/* ✅ 더보기 버튼(페이드 위에 떠있게) */
+.stillcut-box .more-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    background: rgba(0, 0, 0, .42);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+
+    font-size: 0;
+    /* 텍스트 숨기고 ▼만 */
+}
+
+.stillcut-box .more-arrow::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid rgba(255, 255, 255, .9);
+    border-bottom: 2px solid rgba(255, 255, 255, .9);
+    transform: rotate(45deg);
+    display: block;
+}
+
+.stillcut-box .more-arrow:hover {
+    background: rgba(0, 0, 0, .60);
+    border-color: rgba(255, 255, 255, .30);
+    transform: translateX(-50%) translateY(-3px);
+}
+
+/* ✅ 펼침 상태: 페이드 제거 + 그리드 전체 오픈 */
+.stillcut-box.is-open::after {
+    display: none;
+}
+
+.stillcut-box.is-open .still-grid {
+    max-height: 2000px;
+    /* 충분히 크게 */
+}
+
+/* 펼침 상태에서 버튼을 “접기(▲)”로 */
+.stillcut-box.is-open .more-arrow::before {
+    transform: rotate(-135deg);
+}
+
+/* ===== STILLCUT (JS 버전) ===== */
+.stillcut-box {
+    position: relative;
+    padding-bottom: 78px;
+}
+
+/* 접힘 상태에서 그리드 일부만 */
+.stillcut-box .still-grid {
+    max-height: 210px;
+    overflow: hidden;
+    transition: max-height .45s ease;
+}
+
+/* 페이드 */
+.stillcut-box::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 140px;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(to bottom,
+            rgba(18, 18, 18, 0) 0%,
+            rgba(18, 18, 18, .65) 55%,
+            rgba(18, 18, 18, 1) 100%);
+}
+
+/* 더보기(▼) 버튼 */
+.stillcut-box .more-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    background: rgba(0, 0, 0, .42);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+.stillcut-box .more-arrow::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid rgba(255, 255, 255, .9);
+    border-bottom: 2px solid rgba(255, 255, 255, .9);
+    transform: rotate(45deg);
+    display: block;
+}
+
+/* 펼침 상태 */
+.stillcut-box.is-open::after {
+    display: none;
+}
+
+.stillcut-box.is-open .still-grid {
+    max-height: 2000px;
+}
+
+.stillcut-box.is-open .more-arrow::before {
+    transform: rotate(-135deg);
+}
+
+/* ▲ */
+
+.stillcut-box .more-arrow:hover {
+    background: rgba(0, 0, 0, .60);
+    border-color: rgba(255, 255, 255, .30);
+    transform: translateX(-50%) translateY(-3px);
+}
+
+
+
+
+/* ===================================================== */
+
+
+
+
+
+
+
+
+
+
+/*※필요없는기능이라 삭제할 가능성!!※ 좌/우 화살표 버튼 UI (원하면 HTML에 버튼만 추가) */
+/* ===== 좌우 버튼: still-strip 위에 겹치기 ===== */
+/* 지금 HTML에 버튼이 strip 다음에 오므로,
+   absolute로 잡고 “strip 영역 높이 기준”으로 올려줌 */
+.slider-btn {
+    position: absolute;
+    /* 트레일러 영역 높이+여백 때문에 값이 필요함 → 아래 값으로 대략 맞추고,
+     너 화면에서 1~2번만 조절하면 딱 맞음 */
+    top: 55%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    background: rgba(0, 0, 0, .35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 6;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, .50);
+    border-color: rgba(255, 255, 255, .26);
+}
+
+.slider-btn.prev {
+    left: 12px;
+}
+
+.slider-btn.next {
+    right: 12px;
+}
+
+/* 화살표 모양(이미지 없이 CSS로) */
+.slider-btn::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid rgba(255, 255, 255, .9);
+    border-bottom: 2px solid rgba(255, 255, 255, .9);
+    transform: rotate(135deg);
+}
+
+.slider-btn.next::before {
+    transform: rotate(-45deg);
+}
+
+
+
+/* =================================================== */
+
+/* 섹션3 */
+/* Event */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.event-card {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 14px;
+    align-items: stretch;
+    padding: 12px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, .03);
+}
+
+.event-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, .06);
+}
+
+.event-card__txt {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px 4px;
+}
+
+.event-card__txt strong {
+    font-size: 16px
+}
+
+.event-card__txt span {
+    color: var(--muted);
+    font-size: 13px
+}
+
+.event-card__date {
+    color: rgba(255, 255, 255, .78)
+}
+
+.pager {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    color: var(--muted);
+}
+
+.pager__btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, .12);
+    background: rgba(0, 0, 0, .25);
+    color: var(--text);
+    cursor: pointer;
+}
+
+.pager__state {
+    font-weight: 700
+}
+
+/* =================================================== */
+/*  Promo / 광고배너 */
+
+.promo {
+    margin-top: 24px;
+    background: linear-gradient(90deg, #7b59ff, #b47bff);
+    color: #130b2a;
+}
+
+.promo__inner {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.promo__sub {
+    margin: 0;
+    font-weight: 800;
+    opacity: .85
+}
+
+.promo__title {
+    margin: 6px 0 0;
+    font-weight: 900;
+    font-size: 22px
+}
+
+
+
+/* =================================================== */
+/* 푸터 주소창 */
+/* Footer */
+.footer {
+    background: #e31c1c;
+    color: rgba(255, 255, 255, .92);
+}
+
+.footer__inner {
+    padding: 26px 0;
+    display: grid;
+    grid-template-columns: 140px 1fr 220px;
+    gap: 18px;
+    align-items: start;
+}
+
+.footer__brand {
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.footer__meta p {
+    margin: 0 0 6px;
+    opacity: .92;
+}
+
+.footer__meta small {
+    opacity: .85
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 14px;
+}
+
+.sns {
+    display: flex;
+    gap: 10px
+}
+
+.sns__dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .22);
+    border: 1px solid rgba(255, 255, 255, .25);
+}
+
+.qr {
+    width: 86px;
+    height: 86px;
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, .25), rgba(255, 255, 255, .08)),
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, .25) 0 6px, transparent 6px 12px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, .25);
+}
+
+
+
+/* =================================================== */
+
+/* 반응형 */
+/* ===== Responsive ===== */
+@media (max-width: 980px) {
+
+    .grid-2 {
+        grid-template-columns: 1fr
+    }
+
+    .trailer-row {
+        grid-template-columns: 1fr
+    }
+
+    .still-grid {
+        grid-template-columns: 1fr
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr
+    }
+
+    .footer__inner {
+        grid-template-columns: 1fr;
+        gap: 12px
+    }
+
+    .footer__right {
+        align-items: flex-start
+    }
+}
+
+/* --- 섹션2 / 트레일러+반응형---*/
+@media (max-width: 980px) {
+    .trailer-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .still {
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 520px) {
+    .trailer-row {
+        grid-template-columns: 1fr;
+    }
+
+    .section-wrap,
+    .section-panel {
+        padding: 20px;
+        border-radius: 22px;
+    }
+}
+
+
+/* =================================================== */
