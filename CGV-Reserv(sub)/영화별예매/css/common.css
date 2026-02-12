@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    text-transform: uppercase;
     box-sizing: border-box;
+    color: #DDDDDD;
 }
 
 li {
@@ -28,9 +28,9 @@ i {
 
 .blind {
     position: absolute;
-    top: -9999px;
+    top: -99999px;
 }
 
 body {
-    font-family: "Pretendard", sans-serif;
+    font-family: "Pretendrad", sans-serif;
 }
