@@ -326,7 +326,7 @@
                             <article class="review-card">
                                 <div class="rv-top">
                                     <div class="rv-avatar" aria-hidden="true"></div>
-                                    <div class="rv-who">
+                                    <div class="rv-who"><img src="./images/images/section1-2/user-reivew.png" alt="">
                                         <strong>관람객 이름</strong>
                                         <span>2026.01.29</span>
                                     </div>
@@ -422,6 +422,9 @@
                     <!-- <button class="slider-btn prev" type="button" aria-label="이전"></button>
                     <button class="slider-btn next" type="button" aria-label="다음"></button> -->
                     <div class="still-grid">
+
+
+
                         <a class="still-card" href="#"><img src="./images/images/section2/steel-cut5.png"
                                 alt="스틸컷" /></a>
                         <a class="still-card" href="#"><img src="./images/images/section2/steel-cut6.png"
@@ -436,14 +439,49 @@
                                 alt="스틸컷" /></a>
                         <a class="still-card" href="#"><img src="./images/images/section2/steel-cut2.png"
                                 alt="스틸컷" /></a>
-                    </div>
-                    <!-- <button class="more-arrow" type="button" aria-label="스틸컷 더보기"><span>더보기</span>more</button> -->
-                    <!-- <button class="more-arrow" type="button" aria-label="스틸컷 더보기"><span class="still-card__cap">더보기
+
+
+
+                        <!-- 이미지 확대 팝업창 -->
+                        <div class="still-card">
+                            <img src="./images/images/section2/steel-cut1.png" id="openBtn"
+                                style="cursor:pointer; width:400px;">
+                        </div>
+
+                        <div id="modalContainer" class="hidden">
+                            <div class="modal-overlay"></div>
+
+                            <div class="modal-content">
+                                <div class="modal-one"><button class="modal-close" id="closeBtn">X 닫기</button>
+                                    <h3> 시스터 공식 스틸컷 - 01</h3>
+                                </div>
+                                <p><img src="./images/images/section2/steel-cut1.png" alt=""></p>
+                                <ul class="stillcut-list">
+                                    <li><a href=""><img src="./images/images/section2/steel-cut2.png" alt=""></a></li>
+                                    <li><a href=""><img src="./images/images/section2/steel-cut3.png" alt=""></a></li>
+                                    <li><a href=""><img src="./images/images/section2/steel-cut4.png" alt=""></a></li>
+                                    <li><a href=""><img src="./images/images/section2/steel-cut5.png" alt=""></a></li>
+                                    <li><a href=""><img src="./images/images/section2/steel-cut6.png" alt=""></a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- <button class="more-arrow" type="button" aria-label="스틸컷 더보기"><span>더보기</span>more</button> -->
+                        <!-- <button class="more-arrow" type="button" aria-label="스틸컷 더보기"><span class="still-card__cap">더보기
                         </span>more</button> -->
-                    <button class="more-arrow" type="button" aria-label="스틸컷 더보기"><span>더보기
-                        </span>more</button>
+
+
+
+
+
+                        <button class="more-arrow" type="button" aria-label="스틸컷 더보기"><span>더보기
+                            </span>more</button>
+
+                    </div>
+
 
                 </div>
+
             </div>
             <section class="section-event">
                 <h3 class="section-title">EVENT</h3>
@@ -531,7 +569,33 @@
             </div>
         </div>
     </footer>
+
 </body>
+
+<script>
+    const openBtn = document.getElementById('openBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const modal = document.getElementById('modalContainer');
+
+    // 띄우기
+    openBtn.onclick = () => {
+        modal.classList.remove('hidden');
+    };
+
+    // 닫기
+    closeBtn.onclick = () => {
+        modal.classList.add('hidden');
+    };
+
+    // 배경(overlay) 클릭 시에도 닫히게 하고 싶다면?
+    document.querySelector('.modal-overlay').onclick = () => {
+        modal.classList.add('hidden');
+    };
+
+</script>
+
+
+
 <script>
     const stillBox = document.querySelector('.stillcut-box');
     const stillBtn = stillBox?.querySelector('.more-arrow');
