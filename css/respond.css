@@ -1,0 +1,23 @@
+/* ipad */
+@media screen and (max-width: 1280px) {
+
+    .main-visual-wrap>.video-inner,
+    .video-end-inner {
+        width: 100%;
+        height: 600px;
+    }
+
+    .video-inner .main-video {
+        max-width: 1920px;
+    }
+
+    .video-inner .main-video video {
+        height: 600px;
+        object-fit: cover;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:480px) {}
