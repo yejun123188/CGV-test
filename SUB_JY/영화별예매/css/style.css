@@ -172,7 +172,7 @@ header {
 /* 탭메뉴 */
 .tab-list ul {
     display: flex;
-    padding-top: 60px;
+    padding-top: 15px;
     gap: 10px;
 }
 
@@ -184,6 +184,49 @@ header {
 
 .tab-list li>a.active {
     background: rgba(255, 0, 0, 0.5);
+}
+
+/* 검색창 */
+.tab-menu-wrap {
+    margin-top: 60px;
+}
+
+.tab-menu-wrap .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-top {
+    width: 250px;
+}
+
+.search-top>form {
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    border-radius: 28px;
+    height: 40px;
+    margin-top: 4px;
+}
+
+.search-top>form>input {
+    width: 170px;
+    height: 40px;
+    background: none;
+    border: none;
+    margin-left: 18px;
+}
+
+.search-top>form>button {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+}
+
+.search-top>form>button>img {
+    width: 20px;
+    margin-left: 20px;
 }
 
 /* 인기상영작 TOP10 */
