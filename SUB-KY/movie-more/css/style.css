@@ -1,4 +1,3 @@
-/* 공통사항 */
 body {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#222222+0,171717+100 */
     background: linear-gradient(to bottom, rgba(34, 34, 34, 1) 0%, rgba(17, 17, 17, 1) 100%);
@@ -7,14 +6,11 @@ body {
 }
 
 .inner {
-    max-width: 1600px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
-/* =================================================== */
-
-
-/* 헤더 */
+/* header */
 header {
     position: absolute;
     top: 0;
@@ -129,14 +125,46 @@ header {
     box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* main */
+.page-inner {
+    margin-top: 60px;
+    background: #222222;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
 
+.page-inner>.page-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100px;
+    padding-bottom: 20px;
+    margin: 0 160px;
+}
 
+.page-wrap>h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.page-wrap>.location>span {
+    font-size: 12px;
+    color: #707070;
+}
+
+.page-wrap>.location>span:last-child {
+    color: #DDD;
+    font-weight: 600;
+}
+
+.page-wrap>.location>span>a:hover {
+    text-decoration: underline;
+}
 
 /* =================================================== */
 /* 메인 */
 /* main => 상단 “상세페이지 바”(검정바) 디테일 살리기
    - 네 구조상 .page-inner / .page-wrap 이 그 바 역할이라 여기 맞춤 */
-.page-inner {
+/* .page-inner {
     margin-top: 60px;
     background: rgba(34, 34, 34, .85) !important;
     backdrop-filter: blur(14px) !important;
@@ -171,7 +199,7 @@ header {
 
 .page-wrap>.location>span>a:hover {
     text-decoration: underline;
-}
+} */
 
 /* 1.변수모음 */
 :root {
@@ -614,10 +642,12 @@ button {
 
 /* shade */
 .hero__shade {
+
+    min-height: 500px;
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .7) 60%),
+        linear-gradient(90deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .7) 80%),
         linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .7));
 }
 
@@ -2188,3 +2218,11 @@ button {
 
 
 /* =================================================== */
+
+@media screen and (max-width:480px) {
+    .hero .hero__shade {
+        position: fixed;
+        width: 100%;
+        flex: 0 0 100%;
+    }
+}
