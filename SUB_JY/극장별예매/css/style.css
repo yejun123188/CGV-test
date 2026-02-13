@@ -221,6 +221,107 @@ header {
 
 /* 극장리스트 */
 
+/* 영화제목 */
+.title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 45px;
+    margin-top: 70px;
+}
+
+.title h3 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.title p {
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.title img {
+    margin-left: auto;
+}
+
+.look {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 23px;
+}
+
+/* 상영시간표 */
+.table-list-wrap {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8b8b8b+0,4d4d4d+100&0.4+0,0.5+100 */
+    background: linear-gradient(to bottom, rgba(139, 139, 139, 0.4) 0%, rgba(77, 77, 77, 0.5) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    width: 300px;
+    height: 172px;
+    border-radius: 24px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.time-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.table-list {
+    display: flex;
+    margin-left: 47px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* 상영시간 */
+.clock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.clock strong {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.clock p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* 좌석 */
+.seat {
+    display: flex;
+    gap: 5px;
+    padding-top: 15px;
+}
+
+.no-seat {
+    color: #EE3123;
+}
+
+.warning {
+    color: #ff6a00;
+}
+
+.situation {
+    color: #3895ff;
+}
+
+/* 극장 */
+.theater-info {
+    display: flex;
+    gap: 5px;
+    padding-top: 15px;
+
+}
+
 /* 예매상태바(고정) */
 .situation-wrap {
     /* position: fixed; */
