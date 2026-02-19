@@ -447,25 +447,55 @@ ul {
     ;
 }
 
+
+
+
 /*===FOOTER=== */
+/* FOOTER */
 footer {
     background-color: #EE3123;
-    padding: 60px 0;
+    /* padding: 60px 0;
+    height: 470px; */
+
+
+
 
 }
 
+
+footer>.inner {
+    margin: 10px 200px;
+    align-items: center;
+    position: relative;
+
+}
+
+
 .footer-logo {
+    /* align-items: center; */
+    margin-left: 50px;
     filter: contrast(200%);
+    /* position: absolute; */
 }
 
 .footer-middle {
+    /* height: 183px; */
     display: flex;
     justify-content: space-between;
-    padding-top: 58px;
+    /* padding-top: 58px; */
+    margin-left: 50px;
+
+
+}
+
+address {
+    height: 183px;
+    padding: 0px;
 }
 
 address p {
     line-height: 25px;
+
 }
 
 .qr-list {
@@ -480,6 +510,8 @@ address p {
 
 
 
+
+
 .qr-list p:last-child {
     font-size: 14px;
     font-weight: 300;
@@ -490,6 +522,7 @@ address p {
     padding-top: 58px;
     display: flex;
     justify-content: space-between;
+    margin: 50px 0;
     align-items: center;
 
 }
@@ -498,18 +531,29 @@ address p {
 
     border: none;
     border-radius: 20px;
+    height: 19px;
 }
 
 .f-inner-left {
+    /* position: absolute; */
     display: flex;
     gap: 35px;
+    /* height: 19px;
+    width: 704.38px; */
 
+}
+
+.footer-bottom {
+    height: 0px;
 }
 
 .footer-bottom .bt-list {
     display: flex;
+    align-items: center;
     gap: 35px;
 }
+
+
 
 .footer-bottom .sns-list {
     display: flex;
