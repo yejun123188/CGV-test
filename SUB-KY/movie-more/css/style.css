@@ -395,6 +395,7 @@ button {
 }
 
 .topbar__inner {
+    position: fixed;
     height: 64px;
     display: flex;
     align-items: center;
@@ -449,6 +450,7 @@ button {
 
 /* 2) 뱃지(돌비/4dx/imax…) : 2번처럼 “첫번째 밝게, 나머지 어둡게” */
 .badge {
+
     font-size: 12px !important;
     font-weight: 800;
     letter-spacing: .3px;
@@ -651,8 +653,23 @@ button {
         linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .7));
 }
 
+.hero__movie-title {
+    width: 0 auto;
+    min-width: 500px;
+}
+
+.hero__shade>img {
+
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 /* bottom fade */
 .hero::after {
+
     content: "";
     position: absolute;
     left: 0;
@@ -678,6 +695,7 @@ button {
     transform: translateX(-50%);
 
     width: min(1120px, calc(100% - 40px));
+    height: 1200pxs;
     display: flex;
 
     justify-content: flex-start !important;
@@ -755,6 +773,9 @@ button {
 /* mobile */
 @media(max-width:980px) {
     .hero__main {
+        max-width: 100%;
+        height: auto;
+
         position: static;
         transform: none;
         flex-direction: column;
@@ -2220,9 +2241,38 @@ button {
 /* =================================================== */
 
 @media screen and (max-width:480px) {
-    .hero .hero__shade {
-        position: fixed;
-        width: 100%;
-        flex: 0 0 100%;
+
+    .container hero__content {}
+
+    .hero__panel {}
+
+
+    /* 1.제거하기 */
+
+    /* 2.보이기 */
+
+
+    /* 100%만들기 */
+}
+
+/* --- */
+/* ipad */
+@media screen and (max-width: 1280px) {}
+
+/* mobile */
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:480px) {
+    .header-inner>.gnb-list {
+        display: none;
+    }
+
+
+    .page-wrap h2 {
+        font-size: 16px;
+    }
+
+    .location {
+        display: none;
     }
 }

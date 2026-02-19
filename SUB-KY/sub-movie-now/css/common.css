@@ -545,3 +545,12 @@ address p {
     padding: 5px;
     border-radius: 40%;
 }
+
+/* =============반응형============== */
+/* ipad */
+@media screen and (max-width: 1280px) {}
+
+/* mobile */
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:480px) {}
