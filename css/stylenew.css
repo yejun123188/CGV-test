@@ -12,7 +12,7 @@ main {
 }
 
 section {
-    padding: 0 160px;
+    padding: 50px 160px 0;
 }
 
 /* header */
@@ -295,18 +295,17 @@ header {
     gap: 5px;
     padding: 10px;
     height: 245px;
+    z-index: 10000;
 }
 
-.video-inner>img {
-    width: 420px;
+.video-inner img {
+    width: 400px;
     height: 180px;
-    z-index: 1000;
 }
 
 .video-inner .head-btn-wrap {
     height: 56px;
     font-size: 20px;
-    z-index: 1000;
 }
 
 .video-inner .head-btn-wrap a {
@@ -449,37 +448,6 @@ video-end에 있는 버튼도 동일하게 수정해뒀습니다 !*/
         opacity: 1;
     }
 }
-
-/* 공통 */
-section {
-    /* background: #222428; */
-    padding-top: 50px;
-
-}
-
-.notice-section {
-    height: 586px;
-
-}
-
-h2 {
-    font-size: 24px;
-}
-
-
-
-
-
-.inner {
-    max-width: 1600px;
-    margin: 0 auto;
-    /* background-color: rgba(255, 0, 255, 0.1); */
-}
-
-
-
-
-
 
 /* =================================================== */
 
