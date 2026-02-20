@@ -14,7 +14,7 @@ body {
 h3 {
     margin-top: 45px;
     margin-bottom: 38px;
-    font-size: 24px;
+    font-size: 1.50em;
 }
 
 /* header */
@@ -81,7 +81,7 @@ header {
     width: 100%;
     height: 60px;
     line-height: 60px;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .ham-wrap>div li:hover {
@@ -90,7 +90,7 @@ header {
 
 .ham-wrap>div li:first-child {
     background: rgba(0, 0, 0, 0.5);
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .ham-wrap>div li:first-child:hover {
@@ -150,12 +150,12 @@ header {
 }
 
 .page-wrap>h2 {
-    font-size: 32px;
+    font-size: 2em;
     font-weight: 700;
 }
 
 .page-wrap>.location>span {
-    font-size: 12px;
+    font-size: 0.75em;
     color: #707070;
 }
 
@@ -341,7 +341,7 @@ header {
     margin: 0;
     padding: 0;
     align-items: center;
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 .situation-wrap strong {
@@ -368,7 +368,7 @@ header {
     background: rgba(255, 0, 0, 0.5);
     padding: 12px 60px;
     height: 70px;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 /* FOOTER */
@@ -397,14 +397,14 @@ address p {
 }
 
 .qr-list p {
-    font-size: 18px;
+    font-size: 1.13em;
     font-weight: 500;
 }
 
 
 
 .qr-list p:last-child {
-    font-size: 14px;
+    font-size: 0.88em;
     font-weight: 300;
     padding-top: 20px;
 }
@@ -418,7 +418,6 @@ address p {
 }
 
 .select-company {
-
     border: none;
     border-radius: 20px;
 }
@@ -468,3 +467,12 @@ address p {
     padding: 5px;
     border-radius: 40%;
 }
+
+/* 반응형 */
+/* ipad */
+@media screen and (max-width:1280px) {}
+@media screen and (max-width:980px) {}
+
+/* mobile */
+@media screen and (max-width:768px) {}
+@media screen and (max-width:480px) {}
