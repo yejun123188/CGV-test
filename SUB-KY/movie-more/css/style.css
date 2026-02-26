@@ -1,4 +1,3 @@
-/* 공통사항 */
 body {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#222222+0,171717+100 */
     background: linear-gradient(to bottom, rgba(34, 34, 34, 1) 0%, rgba(17, 17, 17, 1) 100%);
@@ -7,14 +6,11 @@ body {
 }
 
 .inner {
-    max-width: 1600px;
+    max-width: 1920px;
     margin: 0 auto;
 }
 
-/* =================================================== */
-
-
-/* 헤더 */
+/* header */
 header {
     position: absolute;
     top: 0;
@@ -129,14 +125,46 @@ header {
     box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* main */
+.page-inner {
+    margin-top: 60px;
+    background: #222222;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
 
+.page-inner>.page-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100px;
+    padding-bottom: 20px;
+    margin: 0 160px;
+}
 
+.page-wrap>h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.page-wrap>.location>span {
+    font-size: 12px;
+    color: #707070;
+}
+
+.page-wrap>.location>span:last-child {
+    color: #DDD;
+    font-weight: 600;
+}
+
+.page-wrap>.location>span>a:hover {
+    text-decoration: underline;
+}
 
 /* =================================================== */
 /* 메인 */
 /* main => 상단 “상세페이지 바”(검정바) 디테일 살리기
    - 네 구조상 .page-inner / .page-wrap 이 그 바 역할이라 여기 맞춤 */
-.page-inner {
+/* .page-inner {
     margin-top: 60px;
     background: rgba(34, 34, 34, .85) !important;
     backdrop-filter: blur(14px) !important;
@@ -171,7 +199,7 @@ header {
 
 .page-wrap>.location>span>a:hover {
     text-decoration: underline;
-}
+} */
 
 /* 1.변수모음 */
 :root {
@@ -367,6 +395,7 @@ button {
 }
 
 .topbar__inner {
+    position: fixed;
     height: 64px;
     display: flex;
     align-items: center;
@@ -421,6 +450,7 @@ button {
 
 /* 2) 뱃지(돌비/4dx/imax…) : 2번처럼 “첫번째 밝게, 나머지 어둡게” */
 .badge {
+
     font-size: 12px !important;
     font-weight: 800;
     letter-spacing: .3px;
@@ -614,15 +644,32 @@ button {
 
 /* shade */
 .hero__shade {
+
+    min-height: 500px;
     position: absolute;
     inset: 0;
     background:
-        linear-gradient(90deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .7) 60%),
+        linear-gradient(90deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .7) 80%),
         linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .7));
 }
 
+.hero__movie-title {
+    width: 0 auto;
+    min-width: 500px;
+}
+
+.hero__shade>img {
+
+    max-width: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 /* bottom fade */
 .hero::after {
+
     content: "";
     position: absolute;
     left: 0;
@@ -648,6 +695,7 @@ button {
     transform: translateX(-50%);
 
     width: min(1120px, calc(100% - 40px));
+    height: 1200pxs;
     display: flex;
 
     justify-content: flex-start !important;
@@ -725,6 +773,9 @@ button {
 /* mobile */
 @media(max-width:980px) {
     .hero__main {
+        max-width: 100%;
+        height: auto;
+
         position: static;
         transform: none;
         flex-direction: column;
@@ -2188,3 +2239,40 @@ button {
 
 
 /* =================================================== */
+
+@media screen and (max-width:480px) {
+
+    .container hero__content {}
+
+    .hero__panel {}
+
+
+    /* 1.제거하기 */
+
+    /* 2.보이기 */
+
+
+    /* 100%만들기 */
+}
+
+/* --- */
+/* ipad */
+@media screen and (max-width: 1280px) {}
+
+/* mobile */
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:480px) {
+    .header-inner>.gnb-list {
+        display: none;
+    }
+
+
+    .page-wrap h2 {
+        font-size: 16px;
+    }
+
+    .location {
+        display: none;
+    }
+}

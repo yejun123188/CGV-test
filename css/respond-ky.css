@@ -1,0 +1,360 @@
+/* MOVIE-SECTION  */
+.movie-btn-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    /* padding: 40px 157px 40px 157px; */
+}
+
+/* 텍스트 + 아이콘 나란히 */
+.title-sub {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 에그 아이콘 */
+.title-sub .egg {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    flex-shrink: 0;
+    /* 눌려서 찌그러지는 거 방지 */
+}
+
+/* 기존 img 100% 무효화 */
+.movie-list img.egg {
+    width: 14px;
+    height: 14px;
+}
+
+
+.m-button-list {
+    display: flex;
+    gap: 50px;
+
+}
+
+.movie-btn-wrap a {
+    font-size: 1.25em;
+}
+
+.movie-btn-wrap span {
+    padding-left: 40px;
+    color: #666768;
+}
+
+.m-button-list>li:hover {
+    color: #EE3123;
+}
+
+.more-btn {
+    font-size: 13px;
+}
+
+.more-btn:hover {
+    color: #b3b3b3;
+}
+
+
+
+.movie-wrap {
+    padding-top: 30px;
+}
+
+.poster-box .rank {
+    font-size: 50px;
+    font-weight: 800;
+    font-style: italic;
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    color: #fff;
+
+}
+
+
+.movie-wrap {
+    /* margin: 0 180px; */
+}
+
+.movie-list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.poster-box {
+    position: relative;
+
+}
+
+.heart-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/* 실제 하트 그림은 여기 */
+.poster-box::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    background: url("../images/unlike-icon.png") no-repeat center;
+    background-size: contain;
+    pointer-events: none;
+}
+
+.poster-box.liked::after {
+    background-image: url("../images/like-icon.png");
+}
+
+.poster-box {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.poster-box .click {
+    transition: filter 0.3s ease;
+}
+
+.poster-box .click:hover {
+    filter: blur(8px) brightness(50%);
+
+
+}
+
+
+
+.poster-box:hover .blind {
+    display: flex;
+}
+
+.poster-box .blind {
+    position: absolute;
+    top: 90px;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.movie-title {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.movie-title .age-box {
+    font-size: 15px;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-weight: 900;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.movie-title .one {
+    background-color: rgba(211, 151, 54, 80);
+
+}
+
+.movie-title .two {
+    font-weight: 600;
+    background-color: rgba(64, 140, 64, 80);
+    letter-spacing: -2px;
+    font-size: 14px;
+}
+
+.movie-title .three {
+    background-color: rgba(190, 178, 47, 80);
+
+}
+
+.movie-title .four {
+    background-color: rgba(202, 73, 73, 80);
+    ;
+
+}
+
+.text-box .title-sub::before {
+    content: "";
+    display: block;
+    top: 65%;
+    left: 18%;
+    width: 15px;
+    height: 16px;
+    position: absolute;
+    background: url(../images/movie/에그지수.png);
+}
+
+
+
+
+
+.movie-list li {
+    text-align: center;
+}
+
+.movie-list img {
+    display: block;
+    width: 100%;
+}
+
+.ticket-box {
+    position: relative;
+
+}
+
+.ticket-box .text-box {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    ;
+}
+
+.ticket-box .text-box .movie-title {
+    font-size: 1.5em;
+    padding-bottom: 19px;
+    display: flex;
+    justify-content: center;
+}
+
+.ticket-box .text-box .title-sub {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+
+}
+
+.ticket-box .text-box .title-sub p {
+    font-size: 1em;
+    margin-right: 7px;
+}
+
+.movie-list .button-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.movie-list .button-box button {
+    border: none;
+    width: auto;
+    padding: 0 23px;
+    height: 49px;
+    border-radius: 28px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #DDDDDD;
+    z-index: 9999;
+    font-size: 16px;
+}
+
+.movie-list .button-box .buy {
+    background: rgba(238, 49, 35, 0.5);
+}
+
+.movie-list .button-box button:hover {
+    background: rgba(0, 0, 0, 1);
+    color: #DDDDDD;
+}
+
+.movie-list .button-box .buy:hover {
+    background: rgba(238, 49, 35, 0.9);
+    color: #DDDDDD;
+}
+
+
+/* 무비섹션 - 줄거리 호버 */
+
+.poster-box .blind p:last-child {
+    line-height: 1.5;
+    font-weight: 300;
+
+}
+
+
+.poster-box .blind p {
+    /* font-size: 16px; */
+
+}
+
+.poster-box .blind {
+    display: none;
+    flex-direction: column;
+    /* gap: 20px; */
+    justify-content: left;
+}
+
+.poster-box .blind p {
+    padding: 0 30px;
+    /* text-align: center */
+    /* font-weight: 100;
+    font-size: 12px; */
+}
+
+
+.blind .blind-1 {
+    text-align: left;
+    width: 350px;
+    /* text-align: center; */
+    transform: translate(20px, 8px);
+
+
+}
+
+.blind-1 .b-title {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.blind-1 .genres {
+    font-weight: 200;
+    color: #dddddd
+}
+
+.blind .zulgeri {
+    text-align: left;
+    letter-spacing: 2;
+
+    font-weight: 100;
+    padding-top: 30px;
+    padding-left: 30px;
+    transform: translate(-10px, 8px);
+    width: 350px;
+    display: -webkit-box;
+    /* 방향설정 세로방향 */
+    -webkit-box-orient: vertical;
+    /* 줄수 장하기 */
+    -webkit-line-clamp: 11;
+    overflow: hidden;
+    /* 줄을 변경될 경우 단어를 묶어서 */
+    word-break: keep-all;
+}
+
+
+
+/* ============================================================ */
+
+
+
+/* ======반응형 ======*/
+/* ipad */
+@media screen and (max-width: 1280px) {}
+
+/* mobile */
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:480px) {}
