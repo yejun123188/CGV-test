@@ -11,6 +11,10 @@ main {
     /* background: rgba(255, 0, 0, 0.2); */
 }
 
+section {
+    padding: 50px 160px 0;
+}
+
 /* header */
 header {
     position: absolute;
@@ -243,6 +247,10 @@ header {
     box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.main-visual-wrap {
+    padding: 0;
+}
+
 .main-visual-wrap>.video-inner,
 .video-end-inner {
     height: 950px;
@@ -268,6 +276,12 @@ header {
     max-width: 1920px;
     position: relative;
     overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.video-inner .main-video video {
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -435,37 +449,6 @@ video-end에 있는 버튼도 동일하게 수정해뒀습니다 !*/
         opacity: 1;
     }
 }
-
-/* 공통 */
-section {
-    /* background: #222428; */
-    padding-top: 50px;
-
-}
-
-.notice-section {
-    height: 586px;
-
-}
-
-h2 {
-    font-size: 24px;
-}
-
-
-
-
-
-.inner {
-    max-width: 1600px;
-    margin: 0 auto;
-    /* background-color: rgba(255, 0, 255, 0.1); */
-}
-
-
-
-
-
 
 /* =================================================== */
 
