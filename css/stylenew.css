@@ -295,18 +295,17 @@ header {
     gap: 5px;
     padding: 10px;
     height: 245px;
+    z-index: 10000;
 }
 
-.video-inner>img {
-    width: 420px;
+.video-inner img {
+    width: 400px;
     height: 180px;
-    z-index: 1000;
 }
 
 .video-inner .head-btn-wrap {
     height: 56px;
     font-size: 20px;
-    z-index: 1000;
 }
 
 .video-inner .head-btn-wrap a {
