@@ -29,3 +29,8 @@ body {
 address {
     font-style: normal;
 }
+
+.blind {
+    position: absolute;
+    top: -99999px
+}
